@@ -5,17 +5,22 @@ import Card from "../components/Card.astro";
 
 <Layout title="Frontend Mentor | Time tracking dashboard">
   <main>
-    <Card heading="Work" hours="32" lastweek="Last week - 36 hours" />
-    <Card heading="Play" hours="32" lastweek="Last week - 36 hours" />
-    <Card heading="Study" hours="32" lastweek="Last week - 36 hours" />
+    <Card heading="Work" hours="32hrs" lastweek="Last week - 36 hours" />
+    <Card heading="Play" hours="32hrs" lastweek="Last week - 36 hours" />
+    <Card heading="Study" hours="32hrs" lastweek="Last week - 36 hours" />
   </main>
 </Layout>
 
 <style>
   main {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 100px;
+  }
+
+  .red {
+    background-color: red;
   }
 </style>

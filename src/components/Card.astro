@@ -1,17 +1,21 @@
 ---
-const { heading, hours, lastweek } = Astro.props;
+const { heading, hours, lastweek, class: className } = Astro.props;
 ---
 
 <div class="card">
   <div class="top_container"></div>
   <div class="wrapper">
     <div class="first_column">
-      <div>{heading}</div>
-      <div>{hours}</div>
+      <div class="heading">{heading}</div>
+      <div class="hours">{hours}</div>
     </div>
     <div class="second_column">
-      <div>...</div>
-      <div>{lastweek}</div>
+      <img
+        class="ellipsis"
+        src="./src/assets/icon-ellipsis.svg"
+        alt="elipsis icon"
+      />
+      <div class="last_week">{lastweek}</div>
     </div>
   </div>
 </div>
@@ -25,8 +29,8 @@ const { heading, hours, lastweek } = Astro.props;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 300px;
-    height: 100px;
+    width: 350px;
+    height: 130px;
     position: relative;
     border-radius: 20px;
     background-color: hsl(235, 46%, 20%);
@@ -34,12 +38,45 @@ const { heading, hours, lastweek } = Astro.props;
     color: white;
   }
 
+  .first_column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .second_column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-end;
+  }
+
   .top_container {
     border-radius: 20px 20px 0 0;
     background-color: orange;
     height: 50px;
-    width: 300px;
+    width: 350px;
     position: absolute;
     top: -10px;
+  }
+
+  /* Typography */
+
+  .heading {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .hours {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .ellipsis {
+    width: 20px;
+  }
+
+  .last_week {
+    font-size: 0.8rem;
+    color: hsl(236, 100%, 87%);
   }
 </style>

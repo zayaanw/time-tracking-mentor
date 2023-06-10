@@ -1,0 +1,22 @@
+---
+const { heading, hours, lastweek } = Astro.props;
+---
+
+<div class="wrapper">
+  <div class="first_column">
+    <div>{heading}</div>
+    <div>{hours}</div>
+  </div>
+  <div class="second_column">
+    <div>...</div>
+    <div>{lastweek}</div>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+</style>

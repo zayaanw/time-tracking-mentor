@@ -6,9 +6,16 @@ import Card from "../components/Card.astro";
 <Layout title="Frontend Mentor | Time tracking dashboard">
   <main>
     <Card heading="Work" hours="32" lastweek="Last week - 36 hours" />
-    <Card heading="Work" hours="32" lastweek="Last week - 36 hours" />
-    <Card heading="Work" hours="32" lastweek="Last week - 36 hours" />
+    <Card heading="Play" hours="32" lastweek="Last week - 36 hours" />
+    <Card heading="Study" hours="32" lastweek="Last week - 36 hours" />
   </main>
 </Layout>
 
-<style></style>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+</style>

@@ -2,21 +2,44 @@
 const { heading, hours, lastweek } = Astro.props;
 ---
 
-<div class="wrapper">
-  <div class="first_column">
-    <div>{heading}</div>
-    <div>{hours}</div>
-  </div>
-  <div class="second_column">
-    <div>...</div>
-    <div>{lastweek}</div>
+<div class="card">
+  <div class="top_container"></div>
+  <div class="wrapper">
+    <div class="first_column">
+      <div>{heading}</div>
+      <div>{hours}</div>
+    </div>
+    <div class="second_column">
+      <div>...</div>
+      <div>{lastweek}</div>
+    </div>
   </div>
 </div>
 
 <style>
+  .card {
+    position: relative;
+  }
   .wrapper {
-    margin-top: 20px;
+    margin-block: 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    border-radius: 20px;
+    background-color: hsl(235, 46%, 20%);
+    z-index: 1;
+    color: white;
+  }
+
+  .top_container {
+    border-radius: 20px 20px 0 0;
+    background-color: orange;
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    top: -10px;
   }
 </style>

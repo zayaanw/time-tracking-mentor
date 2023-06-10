@@ -1,9 +1,9 @@
 ---
-const { heading, hours, lastweek, class: className } = Astro.props;
+const { heading, hours, lastweek, color } = Astro.props;
 ---
 
 <div class="card">
-  <div class="top_container"></div>
+  <div class={`top_container ${color}`}></div>
   <div class="wrapper">
     <div class="first_column">
       <div class="heading">{heading}</div>
@@ -54,10 +54,14 @@ const { heading, hours, lastweek, class: className } = Astro.props;
   .top_container {
     border-radius: 20px 20px 0 0;
     background-color: orange;
-    height: 50px;
+    height: 60px;
     width: 350px;
     position: absolute;
-    top: -10px;
+    top: -20px;
+  }
+
+  .light_red {
+    background-color: hsl(15, 100%, 70%);
   }
 
   /* Typography */

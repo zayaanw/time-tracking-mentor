@@ -135,10 +135,21 @@ const { heading, hours, lastweek, color, icon } = Astro.props;
       height: 185px;
     }
 
-    .ellipsis {
+    .first_column,
+    .second_column {
+      margin-left: 30px;
+    }
+
+    .hours {
       position: relative;
-      top: -60px;
-      right: -190px;
+      top: 20px;
+      font-size: 3rem;
+    }
+
+    .ellipsis {
+      position: absolute;
+      top: 25px;
+      right: 20px;
     }
   }
 </style>

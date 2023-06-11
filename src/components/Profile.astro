@@ -17,9 +17,9 @@
     </div>
   </div>
   <div class="bottom_container">
-    <p>Daily</p>
-    <p>Weekly</p>
-    <p>Monthly</p>
+    <a href="/" class="daily">Daily</a>
+    <a href="/" class="weekly">Weekly</a>
+    <a href="/">Monthly</a>
   </div>
 </div>
 
@@ -67,7 +67,19 @@
     width: 350px;
     position: absolute;
     bottom: -62px;
-    color: white;
+
     background-color: hsl(235, 46%, 20%);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(236, 100%, 87%);
+  }
+
+  .weekly {
+    color: #ffff;
+    font-weight: 600;
   }
 </style>

@@ -6,7 +6,9 @@ import Profile from "../components/Profile.astro";
 
 <Layout title="Time tracking dashboard | Weekly">
   <main>
-    <Profile WeeklySelected />
+    <div class="profile_card">
+      <Profile WeeklySelected />
+    </div>
 
     <Card
       color="light_red_work"
@@ -60,5 +62,20 @@ import Profile from "../components/Profile.astro";
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+
+  @media (min-width: 600px) {
+    main {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-content: center;
+      align-items: end;
+    }
+    .profile_card {
+      margin-left: 50px;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
   }
 </style>

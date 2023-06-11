@@ -68,7 +68,6 @@ const { DailySelected, WeeklySelected, MonthlySelected } = Astro.props;
     width: 350px;
     position: absolute;
     bottom: -62px;
-
     background-color: hsl(235, 46%, 20%);
   }
 
@@ -86,5 +85,32 @@ const { DailySelected, WeeklySelected, MonthlySelected } = Astro.props;
   .selected {
     color: #ffff;
     font-weight: 700;
+  }
+
+  @media (min-width: 600px) {
+    .profile_card {
+      flex-direction: column;
+      height: 350px;
+      width: 300px;
+      align-items: flex-start;
+    }
+    .profile_photo {
+      height: 90px;
+      border: 3px solid #ffff;
+      border-radius: 50px;
+    }
+
+    .report_for {
+      font-size: 1rem;
+      color: hsl(236, 100%, 87%);
+    }
+
+    .name {
+      font-size: 2rem;
+    }
+
+    .bottom_container {
+      width: 300px;
+    }
   }
 </style>

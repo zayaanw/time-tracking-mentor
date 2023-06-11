@@ -1,9 +1,11 @@
 ---
-const { heading, hours, lastweek, color } = Astro.props;
+const { heading, hours, lastweek, color, icon } = Astro.props;
 ---
 
 <div class="card">
-  <div class={`top_container ${color}`}></div>
+  <div class={`top_container ${color}`}>
+    <div class="icon_wrapper"><img class="top_icon" src={icon} /></div>
+  </div>
   <div class="wrapper">
     <div class="first_column">
       <div class="heading">{heading}</div>
@@ -57,22 +59,56 @@ const { heading, hours, lastweek, color } = Astro.props;
     height: 60px;
     width: 350px;
     position: absolute;
-    top: -20px;
+    top: -25px;
   }
 
-  .light_red {
+  /* Top container background color & Icon */
+
+  .icon_wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+  }
+  .top_icon {
+    height: 60px;
+    position: absolute;
+    height: 75px;
+    top: -10px;
+    left: 250px;
+  }
+  .light_red_work {
     background-color: hsl(15, 100%, 70%);
+  }
+
+  .soft_blue_play {
+    background-color: hsl(195, 74%, 62%);
+  }
+
+  .light_red_study {
+    background-color: hsl(348, 100%, 68%);
+  }
+
+  .lime_green_excercise {
+    background-color: hsl(145, 58%, 55%);
+  }
+
+  .violet_social {
+    background-color: hsl(264, 64%, 52%);
+  }
+
+  .soft_orange_selfcare {
+    background-color: hsl(43, 84%, 65%);
   }
 
   /* Typography */
 
   .heading {
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
   }
   .hours {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .ellipsis {

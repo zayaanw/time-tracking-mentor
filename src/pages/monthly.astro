@@ -6,7 +6,9 @@ import Profile from "../components/Profile.astro";
 
 <Layout title="Time tracking dashboard | Monthly">
   <main>
-    <Profile MonthlySelected />
+    <div class="profile_card">
+      <Profile MonthlySelected />
+    </div>
     <Card
       color="light_red_work"
       icon="./src/assets/icon-work.svg"
@@ -31,7 +33,7 @@ import Profile from "../components/Profile.astro";
     <Card
       color="lime_green_excercise"
       icon="./src/assets/icon-exercise.svg"
-      heading="Excercise"
+      heading="Exercise"
       hours="11hr"
       lastweek="Last Month - 18 hours"
     />
@@ -59,5 +61,22 @@ import Profile from "../components/Profile.astro";
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+
+  @media (min-width: 600px) {
+    main {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 200px);
+      row-gap: 50px;
+      place-content: center;
+      align-items: end;
+    }
+    .profile_card {
+      margin-left: 50px;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
   }
 </style>

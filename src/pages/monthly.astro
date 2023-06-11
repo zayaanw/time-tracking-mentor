@@ -4,50 +4,50 @@ import Card from "../components/Card.astro";
 import Profile from "../components/Profile.astro";
 ---
 
-<Layout title="Time tracking dashboard | Daily">
+<Layout title="Time tracking dashboard | Monthly">
   <main>
-    <Profile DailySelected />
+    <Profile MonthlySelected />
     <Card
       color="light_red_work"
       icon="./src/assets/icon-work.svg"
       heading="Work"
-      hours="5hrs"
-      lastweek="Yesterday - 7 hours"
+      hours="103hrs"
+      lastweek="Last Month - 128 hours"
     />
     <Card
       color="soft_blue_play"
       icon="./src/assets/icon-play.svg"
       heading="Play"
-      hours="1hrs"
-      lastweek="Yesterday - 2 hours"
+      hours="23hrs"
+      lastweek="Last Month - 29 hours"
     />
     <Card
       color="light_red_study"
       icon="./src/assets/icon-study.svg"
       heading="Study"
-      hours="0hr"
-      lastweek="Yesterday - 1 hour"
+      hours="13hrs"
+      lastweek="Last Month - 19 hours"
     />
     <Card
       color="lime_green_excercise"
       icon="./src/assets/icon-exercise.svg"
       heading="Excercise"
-      hours="1hr"
-      lastweek="Yesterday - 1 hour"
+      hours="11hr"
+      lastweek="Last Month - 18 hours"
     />
     <Card
       color="violet_social"
       icon="./src/assets/icon-social.svg"
       heading="Social"
-      hours="1hr"
-      lastweek="Yesterday - 3 hours"
+      hours="21hrs"
+      lastweek="Last Month - 23 hours"
     />
     <Card
       color="soft_orange_selfcare"
       icon="./src/assets/icon-self-care.svg"
       heading="Self Care"
-      hours="0hr"
-      lastweek="Yesterday - 1 hour"
+      hours="7hrs"
+      lastweek="Last Month - 11 hours"
     />
   </main>
 </Layout>

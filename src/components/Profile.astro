@@ -1,5 +1,5 @@
 ---
-const { isDailySelected, isWeeklySelected } = Astro.props;
+const { DailySelected, WeeklySelected, MonthlySelected } = Astro.props;
 ---
 
 <div class="profile_wrapper">
@@ -18,9 +18,9 @@ const { isDailySelected, isWeeklySelected } = Astro.props;
     </div>
   </div>
   <div class="bottom_container">
-    <a href="/daily" class:list={[{ selected: isDailySelected }]}>Daily</a>
-    <a href="/" class:list={[{ selected: isWeeklySelected }]}>Weekly</a>
-    <a href="/" class="monthly">Monthly</a>
+    <a href="/daily" class:list={[{ selected: DailySelected }]}>Daily</a>
+    <a href="/" class:list={[{ selected: WeeklySelected }]}>Weekly</a>
+    <a href="/monthly" class:list={[{ selected: MonthlySelected }]}>Monthly</a>
   </div>
 </div>
 
@@ -77,6 +77,10 @@ const { isDailySelected, isWeeklySelected } = Astro.props;
     text-decoration: none;
     cursor: pointer;
     color: hsl(236, 100%, 87%);
+  }
+
+  a:hover {
+    color: hsl(236, 100%, 100%);
   }
 
   .selected {

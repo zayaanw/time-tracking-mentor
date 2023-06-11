@@ -16,10 +16,17 @@
       <p class="name">Jeremy Robson</p>
     </div>
   </div>
+  <div class="bottom_container">
+    <p>Daily</p>
+    <p>Weekly</p>
+    <p>Monthly</p>
+  </div>
 </div>
 
 <style>
   .profile_wrapper {
+    position: relative;
+    margin-bottom: 80px;
   }
 
   .profile_card {
@@ -30,12 +37,37 @@
     display: flex;
     align-items: center;
     width: 350px;
-    justify-content: space-between;
+    height: 150px;
+    gap: 20px;
+    z-index: 1;
+    position: relative;
   }
 
   .profile_photo {
     height: 80px;
     border: 3px solid #ffff;
     border-radius: 50px;
+  }
+
+  .report_for {
+    font-size: 0.8rem;
+    color: hsl(236, 100%, 87%);
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .bottom_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 0px 20px 20px;
+    height: 70px;
+    width: 350px;
+    position: absolute;
+    bottom: -62px;
+    color: white;
+    background-color: hsl(235, 46%, 20%);
   }
 </style>

@@ -9,7 +9,6 @@ import Profile from "../components/Profile.astro";
     <div class="profile_card">
       <Profile WeeklySelected />
     </div>
-
     <Card
       color="light_red_work"
       icon="./src/assets/icon-work.svg"
@@ -69,6 +68,8 @@ import Profile from "../components/Profile.astro";
       margin-top: 50px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 200px);
+      row-gap: 50px;
       place-content: center;
       align-items: end;
     }

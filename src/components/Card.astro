@@ -124,4 +124,21 @@ const { heading, hours, lastweek, color, icon } = Astro.props;
     font-size: 0.8rem;
     color: hsl(236, 100%, 87%);
   }
+
+  @media (min-width: 600px) {
+    .card {
+      top: 90px;
+    }
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 185px;
+    }
+
+    .ellipsis {
+      position: relative;
+      top: -60px;
+      right: -190px;
+    }
+  }
 </style>

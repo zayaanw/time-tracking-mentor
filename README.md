@@ -43,15 +43,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Solution](https://time-tracking-mentor.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
@@ -59,7 +57,7 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Using components to render the profiles, as well as frontmatter code to render which time-frame was selected was fun to figure out! Passing props to the components that are then rendered by the layout component was a good learning experience in terms of getting familar with how Astro works.
 
 ```html
 <Profile MonthlySelected />
@@ -77,16 +75,31 @@ Use this section to recap over some of your major learnings while working throug
 />
 ```
 
+Replicating the stacking effect of the card was challenging at first - but the z-index came to the rescue.
+
+```css
+.profile_card {
+  z-index: 1;
+}
+```
+
+Hiding the overflow on the icon images on the 'bottom' stacked card allowed me to replicate an effect of the images essentially being cut off by the edges of its container.
+
+```css
+.icon_wrapper {
+  overflow: hidden;
+}
+```
+
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I really enjoyed building this project out with Astro - I'll certainly be experimenting further with Astro as well as other JavaScript libraries such as React.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Astro Docs](https://docs.astro.build/en/getting-started/) - I referenced this often while building this out. Highly reccomend - it's really well written and structured.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Github - [Zayaan](https://github.com/zayaanw)
+- Frontend Mentor - [@zayaanw](https://www.frontendmentor.io/profile/zayaanw)
